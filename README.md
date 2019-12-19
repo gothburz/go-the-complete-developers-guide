@@ -227,3 +227,37 @@ func newDeckFromFile(filename string) deck {
 	return deck(s)
 }
 ```
+## Section 4: Organizing Data with Structs
+### Struct
+* Data structure. A collection of properties that are related together.
+### 44. Pointer Operations
+```
+&variable - Give me the memory address of the value this variable is pointing at
+*pointer - Give me the value this memory address is pointing at.
+```
+#### Breakdown
+```
+func (pointerToPerson *person) updateName(){
+    *pointerToPerson
+}
+*person = This is the type description, it means we are working with a pointer to a person.
+*pointerToPerson = this is an operator, it means we want to manipulate the value the pointer is referencing.
+```
+
+* Turn `address` into `value` with `*address`
+* Turn `value` into `address` with `&value`
+### 47. Reference vs. Value Types
+#### Value Types
+* Use pointers to change these in a function:
+  * int
+  * float
+  * string
+  * bool
+  * structs
+#### Reference Types
+* Don't worry about pointers with these types
+  * slices
+  * maps
+  * channels
+  * pointers
+  * functions
